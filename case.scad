@@ -30,7 +30,7 @@ module stand( x, y )
 {
     translate([x, y, 0])
     {
-        cylinder( bzo, d = 5, $fn = 30 );
+        cylinder( bzo, d = 7, $fn = 30 );
     }
 }
 
@@ -55,7 +55,7 @@ module TopScrewMount( x, y )
 {
     translate([x, y, 0])
     {
-        cylinder( th + 9.6, d = 5.5, $fn = 60 );
+        cylinder( th + 9.6, d = 6.4, $fn = 60 );
     }
 }
 
@@ -112,11 +112,11 @@ module bottom()
             frontHole( 70.5, bzo - g, 15.9, 8.4 );
             
             // power 
-            translate([thg+66, oy - 10, bzo + 1.25])
-                cube([9.8, 20, 7]);
+            translate([thg+67, oy - 10, bzo + 1.25])
+                cube([10, 20, 7]);
             
             // switches
-            translate([thg+18 - g, 45 - g, -1])
+            translate([thg+18 - g, 47 - g, -1])
                 cube([6.66 + (2 * g), 7.25 + (2 * g), bzo + 2]);
             
             // screw holes with captured nuts
@@ -233,4 +233,3 @@ union()
     translate([0, oy + 5, 0])top();
     translate([oy + 40,0, 0])switch();
 }
-
